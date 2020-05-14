@@ -2,11 +2,11 @@
 from SinglyLL import Node
 
 def cycle_check(node):
-    repeated = []
-    while node.next != None:
-        if(node.next in repeated):
-            return False
-        else:
-            repeated.append(node.value)
-
-    return True
+    marker1 = node
+    marker2 = node
+    while marker2 != None and marker2.nextNode != None:
+        marker1 = marker1.nextnode
+        marker2 = marker2.nextnode.nextnode
+        if(marker2 == marker1):
+            return True
+    return False
