@@ -2,8 +2,7 @@
 # A second array is formed by shuffling the elements of the first array and deleting a random element. 
 # Given these two arrays, find which element is missing in the second array.
 
-#sort both
-
+#Sol1: sort both
 def finder(arr1, arr2): #(O(NlogN))
     arr1.sort()
     arr2.sort()
@@ -13,8 +12,8 @@ def finder(arr1, arr2): #(O(NlogN))
             return num1
     return arr[-1]
 
-import collections
 
+import collections
 def finder2(arr1,arr2):
     d = collections.defaultdict(int)
     for num in arr2:
